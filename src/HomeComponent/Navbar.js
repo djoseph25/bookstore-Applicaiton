@@ -43,28 +43,28 @@ class NavbarPage extends Component {
 					<MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
 						<MDBNavbarNav right>
 							<MDBNavItem active>
-								<MDBNavLink to="#!" className="links">
-									<Link>HOME</Link>
+								<MDBNavLink to="/home" className="links">
+									<a>HOME</a>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
-								<MDBNavLink to="#!" className="links">
-									<Link>ABOUT</Link>
+								<MDBNavLink to="/about" className="links">
+									<a>ABOUT</a>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
-								<MDBNavLink to="#!" className="links">
-									<Link>STORE</Link>
+								<MDBNavLink to="/product" className="links">
+									<a>STORE</a>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
-								<MDBNavLink to="#!" className="links">
-									<Link>CONTACT</Link>
+								<MDBNavLink to="/contact" className="links">
+									<a>CONTACT</a>
 								</MDBNavLink>
 							</MDBNavItem>
 						</MDBNavbarNav>
 
-						<Link>
+						<Link to='/cart'>
 							<i class="fa fa-shopping-bag fa-2x " aria-hidden="true">
 								<span class="badge badge-warning" id="lblCartCount">
 									5

@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
 #icons {
 	width: 35px;
 	padding-bottom: 10px;
@@ -8,20 +14,21 @@
 
 #links {
 	padding-bottom: 12px;
-	color: white;font-weight: 45px;
+	color: white;
+	font-weight: 45px;
 }
 
 #footer {
-    
-      font-family: 'Roboto Mono', monospace;
+	font-size: 17px;
+	font-family: 'Roboto Mono', monospace;
 	margin-top: 50%;
 	color: white;
 	background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
 }
 li {
 	color: white;
+	font-size: 15px;
 }
-#address{
-    margin-left: 25px;
-
+#address {
+	margin-left: 25px;
 }
