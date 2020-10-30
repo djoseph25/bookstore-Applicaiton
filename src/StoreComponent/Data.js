@@ -15,8 +15,9 @@ const DATA = [
 	},
 	{
 		_id: '3',
-		title: 'Long Walk to Freedom',
-		image: 'https://images-na.ssl-images-amazon.com/images/I/71TVXcNC-jL.jpg',
+		title: 'Harry Potter And The Philosopher Stone',
+		image:
+			'https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg',
 		price: 17.99,
 		count: 1,
 	},
@@ -43,8 +44,8 @@ const DATA = [
 	},
 	{
 		_id: '7',
-		title: 'The Gun',
-		image: 'https://images-na.ssl-images-amazon.com/images/I/41TM3ch+CFL._BO1,204,203,200_.jpg',
+		title: 'The Lord Of The Rings',
+		image: 'https://pictures.abebooks.com/isbn/9780544003415-us.jpg',
 		price: 15.99,
 		count: 1,
 	},
@@ -64,8 +65,8 @@ const DATA = [
 	},
 	{
 		_id: '10',
-		title: 'It Not Over until you Win',
-		image: 'https://img.thriftbooks.com/api/images/l/d0050a6273857df57e23c9b04fc4bb686194f9a5.jpg',
+		title: 'A Tales Of Two City',
+		image: 'https://images.penguinrandomhouse.com/cover/9780451530578',
 		price: 15.99,
 		count: 1,
 	},
@@ -83,7 +84,6 @@ const DATA = [
 		price: 34.99,
 		count: 1,
 	},
-
 ];
 
 export default DATA;
