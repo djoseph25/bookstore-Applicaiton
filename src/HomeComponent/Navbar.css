@@ -62,7 +62,7 @@ a {
 	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 45em;
+	height: 32em;
 	width: 100%;
 	background-image: url('../image/store.jpg');
 }
@@ -76,7 +76,7 @@ button:focus {
 
 .jc-center {
 	justify-content: center;
-	padding-top: 550px;
+	padding-top: 380px;
 }
 
 button.margin-right {

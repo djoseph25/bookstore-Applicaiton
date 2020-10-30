@@ -2,20 +2,22 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import NavbarPage from '../src/HomeComponent/Navbar';
-import FooterPage from '../src/HomeComponent/Footer'
-import Contact from '../src/HomeComponent/Contact'
-import AboutUs from '../src/HomeComponent/AboutUs'
-import Cart from '../src/StoreComponent/Cart'
-import Product from '../src/StoreComponent/Product'
-import Details from '../src/StoreComponent/Details'
-import BookSearchApi from '../src/ApiComponent/BookSearchApi'
-
+import FooterPage from '../src/HomeComponent/Footer';
+import Contact from '../src/HomeComponent/Contact';
+import AboutUs from '../src/HomeComponent/AboutUs';
+import Cart from '../src/StoreComponent/Cart';
+import Product from '../src/StoreComponent/Product';
+import Details from '../src/StoreComponent/Details';
+import BookSearchApi from '../src/ApiComponent/BookSearchApi';
+import {BookProvider} from './StoreComponent/BookContext'
 function App() {
 	return (
 		<div className="App">
+			<BookProvider>
+				<eCommercePage/>
 			<NavbarPage />
 			<Switch>
-				<Route exact path="/home" component= {BookSearchApi}  />
+				<Route exact path="/home" render={() => <BookSearchApi />} />
 				<Route path="/product/" component={Product} />
 				<Route path="/product/:id" component={Details} />
 				<Route path="/about" component={AboutUs} />
@@ -23,6 +25,7 @@ function App() {
 				<Route path="/cart" component={Cart} />
 			</Switch>
 			<FooterPage />
+			</BookProvider>
 		</div>
 	);
 }

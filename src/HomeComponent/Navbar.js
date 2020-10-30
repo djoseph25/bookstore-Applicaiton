@@ -11,9 +11,11 @@ import {
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import logo from '../image/logo.png';
+import {BookContext} from '../StoreComponent/BookContext'
 import './Navbar.css';
 
 class NavbarPage extends Component {
+	static contextType = BookContext;
 	state = {
 		isOpen: false,
 	};
@@ -23,8 +25,9 @@ class NavbarPage extends Component {
 	};
 
 	render() {
+		const { Cart, Products } = this.context;
 		return (
-			<div className='color'>
+			<div className="color">
 				<Row>
 					<Col className="logo-row">
 						<img id="logo" src={logo} alt="logo" />
@@ -64,10 +67,10 @@ class NavbarPage extends Component {
 							</MDBNavItem>
 						</MDBNavbarNav>
 
-						<Link to='/cart'>
+						<Link to="/cart">
 							<i class="fa fa-shopping-bag fa-2x " aria-hidden="true">
 								<span class="badge badge-warning" id="lblCartCount">
-									5
+									{Cart.length}
 								</span>
 							</i>
 						</Link>
