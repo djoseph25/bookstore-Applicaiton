@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&display=swap');
 
-.cart-style{
-      font-family: 'Cantarell', sans-serif;
+.cart-style {
+	font-family: 'Cantarell', sans-serif;
 }
 .cart-title {
-  font-family: 'Cantarell', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	padding-top: 2%;
 	text-align: center;
 	margin-bottom: 30%;
 }
 .cart {
-	
 	padding-top: 5px;
 	padding-bottom: 1%;
 	text-align: center;
@@ -58,8 +57,8 @@ label {
 }
 
 .totals-item-total {
-    font-family: bold;
-    font-family: 'Cantarell', sans-serif;
+	font-family: bold;
+	font-family: 'Cantarell', sans-serif;
 }
 
 .checkout {
@@ -70,8 +69,8 @@ label {
 	background-color: #6b6;
 	color: #fff;
 	font-size: 25px;
-    border-radius: 3px;
-    font-family: 'Cantarell', sans-serif;
+	border-radius: 3px;
+	font-family: 'Cantarell', sans-serif;
 }
 
 .checkout:hover {
@@ -79,7 +78,7 @@ label {
 }
 .move-total {
 	margin-right: 21%;
-	margin-bottom: 15%;
+	margin-bottom: 25%;
 	font-family: 'Cantarell', sans-serif;
 }
 

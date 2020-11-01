@@ -25,7 +25,7 @@ class NavbarPage extends Component {
 	};
 
 	render() {
-		const { Cart, Products } = this.context;
+		const { Cart} = this.context;
 		return (
 			<div className="color">
 				<Row>
@@ -36,7 +36,7 @@ class NavbarPage extends Component {
 
 				<MDBNavbar color="info" light expand="md" id="nav">
 					<MDBNavbarBrand>
-						<Link>
+						<Link to='/home'>
 							<strong className="white-text">
 								<i className="fas fa-book" id="book"></i>BookStore
 							</strong>
@@ -45,24 +45,24 @@ class NavbarPage extends Component {
 					<MDBNavbarToggler onClick={this.toggleCollapse} />
 					<MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
 						<MDBNavbarNav right>
-							<MDBNavItem active>
-								<MDBNavLink to="/home" className="links">
-									<a>HOME</a>
+							<MDBNavItem >
+								<MDBNavLink to="/Home" className="links">
+									<b href='/'>HOME</b>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
 								<MDBNavLink to="/about" className="links">
-									<a>ABOUT</a>
+									<b>ABOUT</b>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
 								<MDBNavLink to="/product" className="links">
-									<a>STORE</a>
+									<b>STORE</b>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
 								<MDBNavLink to="/contact" className="links">
-									<a>CONTACT</a>
+									<b>CONTACT</b>
 								</MDBNavLink>
 							</MDBNavItem>
 						</MDBNavbarNav>
@@ -75,7 +75,7 @@ class NavbarPage extends Component {
 							</i>
 						</Link>
 						<MDBNavbarNav right>
-							<Link>
+							<Link to ='/product'>
 								<button className="nav-button">BUY NOW</button>
 							</Link>
 						</MDBNavbarNav>
@@ -83,10 +83,10 @@ class NavbarPage extends Component {
 				</MDBNavbar>
 				<div id="test">
 					<div class="flex-parent jc-center">
-						<Link>
+						<Link to='/about'>
 							<button class="green margin-right">ABOUT US</button>
 						</Link>
-						<Link>
+						<Link to='/contact'>
 							<button class="magenta">CONTACT</button>
 						</Link>
 					</div>

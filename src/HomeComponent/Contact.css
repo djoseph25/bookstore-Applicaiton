@@ -1,0 +1,33 @@
+MBDIcon{
+    float: left;
+}
+.contact-input{
+    width: 97%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-color: rgba(90, 90, 90, 0.781);
+}
+.contact-input:focus{
+    outline: none !important;
+}
+.YourName {
+    padding-bottom: 3%;
+}
+.YourEmail{
+    padding-bottom: 3%;
+}
+.Options {
+    padding-bottom: 3%;
+}
+.Message{
+    padding-bottom: 5%;
+    padding-top: 5%;   
+}
+.c-statement {
+    font-family: 'Kalam', cursive;
+}
+
+.my-5{
+    
+}

@@ -28,7 +28,7 @@ class Details extends Component {
 			<div>
 				{product.map((book) => (
 					<div className="details" key={book._id}>
-						<img src={book.image} />
+						<img src={book.image} alt="product-image" />
 						<div className="box">
 							<div className="row">
 								<span>{book.price}</span>

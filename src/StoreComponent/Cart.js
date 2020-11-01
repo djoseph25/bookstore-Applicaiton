@@ -26,7 +26,7 @@ class CartItem extends Component {
 											<tbody>
 												<tr>
 													<td className="crop">
-														<img src={book.image} id="image" key={book._id} />
+														<img src={book.image} alt='product-image' id="image" key={book._id} />
 													</td>
 													<td>In stock</td>
 													<div className="title">

@@ -14,10 +14,10 @@ function App() {
 	return (
 		<div className="App">
 			<BookProvider>
-				<eCommercePage/>
+				
 			<NavbarPage />
 			<Switch>
-				<Route exact path="/home" render={() => <BookSearchApi />} />
+				<Route  path="/Home"component={BookSearchApi} />
 				<Route path="/product/" component={Product} />
 				<Route path="/product/:id" component={Details} />
 				<Route path="/about" component={AboutUs} />

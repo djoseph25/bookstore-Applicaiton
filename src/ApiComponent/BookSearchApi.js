@@ -32,6 +32,12 @@ class BookSearchApi extends Component {
 		// console.log(query);
 		this.componentDidMount(query);
 	}
+	//NOTE letting folks know what the website can do
+	onClick = () => {
+		setTimeout(function () {
+			alert('Click On a Book to Learn More');
+		}, 6000);
+	}
 	render() {
 		const Booksetup = this.state.Book.map((book, idx) => {
 			const description =
@@ -73,24 +79,19 @@ class BookSearchApi extends Component {
 			);
 		});
 		return (
-			<div>
-				<div id="Input">
-					<div className="searchbox animated zoomIn">
-						<form onSubmit={this.onSubmit} className="">
-							<input
-								type="text"
-								placeholder="search"
-								class="search"
-								ref={(input) => (this.input = input)}
-							/>
-							<i class="fas fa-search"></i>
-							{/* <button onClick={this.handleClick} id="closeid" type="reset" class="close">
-								<i class="fas fa-times"></i>
-								<p id="demo"></p>Search
-							</button> */}
-						</form>
-					</div>
+			<div className="row">
+				<div className="input-style">
+					<form onSubmit={this.onSubmit}>
+						<input type="text" placeholder="search" ref={(input) => (this.input = input)} id='input' onClick={this.onClick}/>
+					<button onClick={this.handleClick} id='button-style'>Search</button>
+					</form>
+					
+			
 				</div>
+				
+					
+			
+
 				<div className="bookpage">{Booksetup}</div>
 			</div>
 		);

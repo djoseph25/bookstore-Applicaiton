@@ -40,7 +40,7 @@
 
 .price {
 	font-size: 25px;
-	margin-left: 60%;
+	margin-left: 45%;
 	padding-bottom: 3%;
 	font-family: 'Roboto Mono', monospace;
 }
@@ -57,6 +57,6 @@
 }
 
 .button-style {
-	margin-left: 46%;
+	margin-left: 40%;
 	padding-bottom: 80px;
 }
