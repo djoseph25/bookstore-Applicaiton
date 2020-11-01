@@ -9,7 +9,7 @@ class Product extends Component {
 	render() {
 		const { Products, AddToCart } = this.context;
 		return (
-			<div>
+			<div className='product-cart'>
 				<h2 className="h1-responsive font-weight-bold text-center my-5 c-statement">Our bestsellers</h2>
 				<p className="grey-text text-center w-responsive mx-auto mb-5 c-statement">
 					I have read halve of these books and theres are my favorite, so I had to include them click add to cart to purchase.

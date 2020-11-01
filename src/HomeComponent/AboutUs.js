@@ -1,264 +1,89 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-	MDBRow,
-	MDBCol,
 	MDBCard,
-	MDBCardImage,
 	MDBCardBody,
+	MDBCardImage,
 	MDBCardTitle,
 	MDBCardText,
-	MDBCardFooter,
+	MDBRow,
+	MDBCol,
 	MDBIcon,
-	MDBTooltip,
+	MDBContainer,
 } from 'mdbreact';
-
-const EcommercePage = () => {
-	return (
-		<section className="text-center my-5">
-			<h2 className="h1-responsive font-weight-bold text-center my-5">Our bestsellers</h2>
-			<p className="grey-text text-center w-responsive mx-auto mb-5">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure
-				provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur
-				veniam.
-			</p>
-			<MDBRow>
-				<MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
-					<MDBCard cascade narrow ecommerce>
-						<MDBCardImage
-							cascade
-							src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/1.jpg"
-							top
-							alt="sample photo"
-							overlay="white-slight"
-						/>
+import './AboutUs.css';
+export default class AboutUs extends Component {
+	render() {
+		return (
+			<div>
+				<MDBRow className="mission">
+					<MDBCard>
 						<MDBCardBody cascade className="text-center">
-							<a href="#!" className="grey-text">
-								<h5>Denim</h5>
-							</a>
-							<MDBCardTitle>
-								<strong>
-									<a href="#!">Denim trousers</a>
-								</strong>
-							</MDBCardTitle>
-							<ul className="rating">
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon far icon="star" />
-								</li>
-							</ul>
-							<MDBCardText>Neque porro quisquam est, qui dolorem ipsum quia dolor sit.</MDBCardText>
-							<MDBCardFooter className="px-1">
-								<span className="float-left font-weight-bold">
-									<strong>49$</strong>
-								</span>
-								<span className="float-right">
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-shopping-cart mr-3" />
-										<span>Add to Cart</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-share-alt mr-3" />
-										<span>Share</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-heart" />
-										<span>Add to Whishlist</span>
-									</MDBTooltip>
-								</span>
-							</MDBCardFooter>
+							<MDBContainer>
+								<h1 className="ourmission c-statement">-Our Mission-</h1>
+								<p className="mission-statement">
+									A place where the reader and book meet and a journey begins.{' '}
+								</p>
+								<h1 className="aboutus c-statement">About</h1>
+								<p className="mission-statement">
+									The STORE statement requests that the procedure save the estimated parameters of the fitted
+									model. The resulting item store is a binary file format that cannot be modified. The
+									contents of the item store can be processed with the PLM procedure.
+								</p>
+								<p className="mission-statement">
+									The information stored by the STORE statement in PROC REG is a subset of what is usually
+									stored by other procedures that implement this statement. In particular, PROC REG stores
+									only the estimated parameters of the model, so that you can later use the CODE statement in
+									PROC PLM to write SAS DATA step code for prediction to a file or catalog entry. With only
+									this subset of information, many other postprocessing features of PROC PLM are not
+									available for item stores that are created by PROC REG.
+								</p>
+							</MDBContainer>
 						</MDBCardBody>
 					</MDBCard>
-				</MDBCol>
-				<MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
-					<MDBCard cascade narrow ecommerce>
-						<MDBCardImage
-							cascade
-							src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/2.jpg"
-							top
-							alt="sample photo"
-							overlay="white-slight"
-						/>
+				</MDBRow>
+				<MDBRow className="mission">
+					<MDBCard>
 						<MDBCardBody cascade className="text-center">
-							<a href="#!" className="grey-text">
-								<h5>Shoes</h5>
-							</a>
-							<MDBCardTitle>
-								<strong>
-									<a href="#!">High heels</a>
-								</strong>
-							</MDBCardTitle>
-							<ul className="rating">
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-							</ul>
-							<MDBCardText>Neque porro quisquam est, qui dolorem ipsum quia dolor sit.</MDBCardText>
-							<MDBCardFooter className="px-1">
-								<span className="float-left font-weight-bold">
-									<strong>89$</strong>
-								</span>
-								<span className="float-right">
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-shopping-cart  ml-3" />
-										<span>Add to cart</span>
-									</MDBTooltip>
-
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-share-alt  ml-3" />
-										<span>Share</span>
-									</MDBTooltip>
-
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-heart  ml-3" />
-										<span>Add to Whishlist</span>
-									</MDBTooltip>
-								</span>
-							</MDBCardFooter>
+							<h1 className="ownership c-statement">Ownership</h1>
+							<MDBContainer>
+								<MDBRow className="owner">
+									<MDBCol size="6">
+										<img
+											src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+											alt="owner-image"
+											id="owner-image"
+										/>
+										<div className="c-statement">Karen Mcdonald</div>
+										<span className="ceo-bio">Owner/Ceo</span>
+										<p className="ceo-bio">
+											Karen Mcdonald Smith stategic vison and manages investor relations. Before Smith Karen
+											was involve in several startup including, Apple, Amazon, Orlando Tech and google Books.
+										</p>
+										<div className="c-statement">Karen Favorite Books</div>
+										<span className="ceo-bio">Da Davinci Code, Live Your Dreams</span>
+									</MDBCol>
+									<MDBCol size="6">
+										<img
+											src="https://images.unsplash.com/photo-1584598408453-5163444959e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+											alt="owner-image"
+											id="owner-image"
+										/>
+										<div className="c-statement">Samuel Noel Joseph</div>
+										<span className="ceo-bio">Owner/Ceo</span>
+										<p className="ceo-bio">
+											Samuel Joseph stategic vison and manages investor relations. Before Smith Karen was
+											involve in several startup including, nefity, yahoo Books, Orlando Tech and don't google
+											Books.
+										</p>
+										<div className="c-statement">Noel Favorite Books</div>
+										<span className="ceo-bio">Goodnight Moon, Baby Code Play</span>
+									</MDBCol>
+								</MDBRow>
+							</MDBContainer>
 						</MDBCardBody>
 					</MDBCard>
-				</MDBCol>
-				<MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
-					<MDBCard cascade narrow ecommerce>
-						<MDBCardImage
-							cascade
-							src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/4.jpg"
-							top
-							alt="sample photo"
-							overlay="white-slight"
-						/>
-						<MDBCardBody cascade className="text-center">
-							<a href="#!" className="grey-text">
-								<h5>Outwear</h5>
-							</a>
-							<MDBCardTitle>
-								<strong>
-									<a href="#!">Brown coat</a>
-								</strong>
-							</MDBCardTitle>
-							<ul className="rating">
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon far icon="star-half" />
-								</li>
-							</ul>
-							<MDBCardText>Neque porro quisquam est, qui dolorem ipsum quia dolor sit.</MDBCardText>
-							<MDBCardFooter className="px-1">
-								<span className="float-left font-weight-bold">
-									<strong>59$</strong>
-								</span>
-								<span className="float-right">
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-shopping-cart mr-3" />
-										<span>Add to Cart</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-share-alt mr-3" />
-										<span>Share</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-heart" />
-										<span>Add to Whishlist</span>
-									</MDBTooltip>
-								</span>
-							</MDBCardFooter>
-						</MDBCardBody>
-					</MDBCard>
-				</MDBCol>
-				<MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
-					<MDBCard cascade narrow ecommerce>
-						<MDBCardImage
-							cascade
-							src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/3.jpg"
-							top
-							alt="sample photo"
-							overlay="white-slight"
-						/>
-						<MDBCardBody cascade className="text-center">
-							<a href="#!" className="grey-text">
-								<h5>Blouses</h5>
-							</a>
-							<MDBCardTitle>
-								<strong>
-									<a href="#!">Shirt</a>
-								</strong>
-							</MDBCardTitle>
-							<ul className="rating">
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon icon="star" />
-								</li>
-								<li>
-									<MDBIcon far icon="star" />
-								</li>
-							</ul>
-							<MDBCardText>Neque porro quisquam est, qui dolorem ipsum quia dolor sit.</MDBCardText>
-							<MDBCardFooter className="px-1">
-								<span className="float-left font-weight-bold">
-									<strong>119$</strong>
-								</span>
-								<span className="float-right">
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-shopping-cart mr-3" />
-										<span>Add to Cart</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-share-alt mr-3" />
-										<span>Share</span>
-									</MDBTooltip>
-									<MDBTooltip domElement placement="top">
-										<i className="grey-text fa fa-heart" />
-										<span>Add to Whishlist</span>
-									</MDBTooltip>
-								</span>
-							</MDBCardFooter>
-						</MDBCardBody>
-					</MDBCard>
-				</MDBCol>
-			</MDBRow>
-		</section>
-	);
-};
-
-export default EcommercePage;
+				</MDBRow>
+			</div>
+		);
+	}
+}
