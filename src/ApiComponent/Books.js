@@ -10,6 +10,7 @@ class Books extends Component {
 	toggle = () => {
 		this.setState({ modal: !this.state.modal });
 	};
+	
 	render() {
 		return (
 			<div className="BookStore">
@@ -31,6 +32,7 @@ class Books extends Component {
 							<Row>
 								<Col lg={5} md={5} sm={5} xs={5}>
 									<img src={this.props.image} className="profile-image" alt="bookImage" />
+									{this.props.id}
 								</Col>
 								<Col lg={7} md={7} sm={7} xs={7}>
 									<div className="Book-info">
@@ -48,11 +50,11 @@ class Books extends Component {
 											<i class="fa fa-star col-yellow"></i>
 											<i class="fa fa-star col-yellow"></i>
 											<i class="fa fa-star col-yellow"></i>
-											<span> {this.props.averageRating}</span>
+											  <span> {this.props.averageRating}</span>
 										</p>
 										<p>
-										<span className='bold'>Published Date: </span>	 
-										<span>{this.props.puh3lishedDate}</span>
+											<span className="bold">Published Date: </span>
+											<span>{this.props.publishedDate}</span>
 										</p>
 										<p>
 											<span className="bold">Description: </span>

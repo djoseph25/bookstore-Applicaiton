@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Books from './Books';
 import './BookSearch.css';
+import { BookContext } from '../StoreComponent/BookContext';
+import { Button } from 'reactstrap';
 
 class BookSearchApi extends Component {
+	static contextType = BookContext;
 	constructor(props) {
 		super(props);
-		this.state = { Book: [] };
+		this.state = {Book:[], BookSearch: 'JavaScript' };
 		this.onSubmit = this.onSubmit.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	async componentDidMount(query) {
-		const api = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
+		const api = `https://www.googleapis.com/books/v1/volumes?q=${this.state.BookSearch}`;
 		let response = await axios.get(api);
 
 		let data = response.data;
@@ -21,24 +24,27 @@ class BookSearchApi extends Component {
 	}
 	onSubmit(event) {
 		event.preventDefault();
-		var query = this.input.value;
-		// console.log(query);
-		this.componentDidMount(query);
+		this.componentDidMount();
 	}
 
 	handleClick(event) {
 		event.preventDefault();
-		var query = this.input.value;
-		// console.log(query);
-		this.componentDidMount(query);
+		this.componentDidMount();
 	}
 	//NOTE letting folks know what the website can do
 	onClick = () => {
 		setTimeout(function () {
 			alert('Click On a Book to Learn More');
 		}, 6000);
-	}
+	};
+	// ANCHOR
+	handleOnChange = (evt) => {
+		this.setState({ [evt.target.name]: evt.target.value });
+	};
+
+	//
 	render() {
+		const { Book} = this.context;
 		const Booksetup = this.state.Book.map((book, idx) => {
 			const description =
 				book.volumeInfo.description === undefined
@@ -49,10 +55,11 @@ class BookSearchApi extends Component {
 
 			const publishedDate =
 				book.volumeInfo.publishedDate === undefined
-					? 'No Published Date was Found'
+					? 'No  Date was Found'
 					: book.volumeInfo.publishedDate;
 			const title =
 				book.volumeInfo.title === undefined ? 'No Book Title Was Found' : book.volumeInfo.title;
+			const id = book.id || 'NO Id';
 
 			const category =
 				book.volumeInfo.categories === undefined ? 'No Category Was Found' : book.volumeInfo.categories;
@@ -63,6 +70,7 @@ class BookSearchApi extends Component {
 				<Books
 					key={idx}
 					title={title}
+					id={id}
 					authors={authors}
 					description={descriptionSlice}
 					publishedDate={publishedDate}
@@ -76,21 +84,27 @@ class BookSearchApi extends Component {
 							: book.volumeInfo.imageLinks.thumbnail
 					}
 				/>
+				
 			);
 		});
 		return (
 			<div className="row">
 				<div className="input-style">
 					<form onSubmit={this.onSubmit}>
-						<input type="text" placeholder="search" ref={(input) => (this.input = input)} id='input' onClick={this.onClick}/>
-					<button onClick={this.handleClick} id='button-style'>Search</button>
+						<input
+						    id="input"
+							type="text"
+							placeholder="search"
+							value={this.state.BookSearch}	
+							name= 'BookSearch'
+							onClick={this.onClick}
+							onChange={this.handleOnChange}
+						/>
+						<button onClick={this.handleClick} id="button-style">
+							Search
+						</button>
 					</form>
-					
-			
 				</div>
-				
-					
-			
 
 				<div className="bookpage">{Booksetup}</div>
 			</div>

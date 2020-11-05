@@ -1,10 +1,36 @@
 import React, { Component } from 'react';
 import DATA from './Data';
+import axios from 'axios';
 //When ever I want to use my state object I just import BookContext
 export const BookContext = React.createContext();
 
 export class BookProvider extends Component {
-	state = { Products: DATA, Cart: [], Total: 0 };
+	constructor(props) {
+		super(props);
+		this.state = { Products: DATA, Cart: [], Total: 0, Book: [] };
+	}
+	// NOTE adding my api call
+  ApiCall = async () => {
+		const api = `https://www.googleapis.com/books/v1/volumes?q=${this.state.BookSearch}`;
+		let response = await axios.get(api);
+
+		let data = response.data;
+		console.log(data.items);
+		this.setState({ Book: [...data.items] });
+	};
+
+	//NOTE letting folks know what the website can do
+	onClick = () => {
+		setTimeout(function () {
+			alert('Click On a Book to Learn More');
+		}, 6000);
+	};
+	// ANCHOR
+	handleOnChange = (evt) => {
+		this.setState({ [evt.target.name]: evt.target.value });
+	};
+	// THE END OF MY TESTING
+
 	//NOTE FInally got add to cart to work correctly
 	AddToCart = (id) => {
 		const { Products, Cart } = this.state;
@@ -65,13 +91,15 @@ export class BookProvider extends Component {
 	};
 
 	render() {
-		const { Products, Cart, Total } = this.state;
-		const { AddToCart, Decrease, Increase, RemoveProduct, TotalPrice } = this;
+		const { Products, Cart, Total, Book, BookSearch } = this.state;
+		const { AddToCart, Decrease, Increase, RemoveProduct, TotalPrice,} = this;
 		return (
 			<BookContext.Provider
 				value={{
+					BookSearch: 'Les Brown',
 					Products,
 					Cart,
+					Book,
 					Total,
 					AddToCart,
 					Decrease,

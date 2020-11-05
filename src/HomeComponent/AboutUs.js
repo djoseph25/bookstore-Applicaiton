@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import {
 	MDBCard,
 	MDBCardBody,
-	MDBCardImage,
-	MDBCardTitle,
-	MDBCardText,
 	MDBRow,
 	MDBCol,
-	MDBIcon,
 	MDBContainer,
 } from 'mdbreact';
 import './AboutUs.css';

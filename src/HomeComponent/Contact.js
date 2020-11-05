@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput } from 'mdbreact';
+import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn } from 'mdbreact';
 import './Contact.css'
 
 class ContactPage extends Component {
