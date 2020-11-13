@@ -14,17 +14,17 @@ function App() {
 	return (
 		<div className="App">
 			<BookProvider>
-				
-			<NavbarPage />
-			<Switch>
-				<Route  path="/Home"component={BookSearchApi} />
-				<Route path="/product/" component={Product} />
-				<Route path="/product/:id" component={Details} />
-				<Route path="/about" component={AboutUs} />
-				<Route path="/contact" component={Contact} />
-				<Route path="/cart" component={Cart} />
-			</Switch>
-			<FooterPage />
+				<NavbarPage />
+				<Switch>
+					<Route exact path="/" component={BookSearchApi} />
+					<Route  path="/Home" component={BookSearchApi} />
+					<Route path="/product/" component={Product} />
+					<Route path="/product/:id" component={Details} />
+					<Route path="/about" component={AboutUs} />
+					<Route path="/contact" component={Contact} />
+					<Route path="/cart" component={Cart} />
+				</Switch>
+				<FooterPage />
 			</BookProvider>
 		</div>
 	);

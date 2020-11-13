@@ -11,7 +11,7 @@ import {
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import logo from '../image/logo.png';
-import {BookContext} from '../StoreComponent/BookContext'
+import { BookContext } from '../StoreComponent/BookContext';
 import './Navbar.css';
 
 class NavbarPage extends Component {
@@ -25,7 +25,7 @@ class NavbarPage extends Component {
 	};
 
 	render() {
-		const { Cart} = this.context;
+		const { Cart } = this.context;
 		return (
 			<div className="color">
 				<Row>
@@ -36,7 +36,7 @@ class NavbarPage extends Component {
 
 				<MDBNavbar color="info" light expand="md" id="nav">
 					<MDBNavbarBrand>
-						<Link to='/home'>
+						<Link to="/">
 							<strong className="white-text">
 								<i className="fas fa-book" id="book"></i>BookStore
 							</strong>
@@ -45,9 +45,9 @@ class NavbarPage extends Component {
 					<MDBNavbarToggler onClick={this.toggleCollapse} />
 					<MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
 						<MDBNavbarNav right>
-							<MDBNavItem >
+							<MDBNavItem>
 								<MDBNavLink to="/Home" className="links">
-									<b href='/'>HOME</b>
+									<b href="/">HOME</b>
 								</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
@@ -75,7 +75,7 @@ class NavbarPage extends Component {
 							</i>
 						</Link>
 						<MDBNavbarNav right>
-							<Link to ='/product'>
+							<Link to="/product">
 								<button className="nav-button">BUY NOW</button>
 							</Link>
 						</MDBNavbarNav>
@@ -83,10 +83,10 @@ class NavbarPage extends Component {
 				</MDBNavbar>
 				<div id="test">
 					<div class="flex-parent jc-center">
-						<Link to='/about'>
+						<Link to="/about">
 							<button class="green margin-right">ABOUT US</button>
 						</Link>
-						<Link to='/contact'>
+						<Link to="/contact">
 							<button class="magenta">CONTACT</button>
 						</Link>
 					</div>
